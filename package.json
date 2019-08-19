@@ -1,0 +1,14 @@
+{
+  "name": "tailwindcss-spacing",
+  "version": "1.0.0",
+  "description": "Tailwind plugin to generate classes for setting a predictable and harmonious spacing.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:suburbicode/tailwindcss-spacing.git"
+  },
+  "scripts": {},
+  "author": "Suburbicode <suburbicode@pm.me>",
+  "keywords": ["tailwindcss", "tailwind", "plugin", "spacing", "spaced items", "child margin"],
+  "license": "MIT"
+}
