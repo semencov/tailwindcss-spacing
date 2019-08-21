@@ -8,7 +8,7 @@
     "url": "git@github.com:suburbicode/tailwindcss-spacing.git"
   },
   "scripts": {
-    "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
+    "release": "git commit --allow-empty -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "author": "Suburbicode <suburbicode@pm.me>",
   "keywords": ["tailwindcss", "tailwind", "plugin", "spacing", "spaced items", "child margin"],
