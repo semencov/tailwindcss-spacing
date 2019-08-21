@@ -1,94 +1,95 @@
-This plugin generates a set of css classes to add fixed margins to container children, except last one, to spread content in a consistent manner.
+# TailwindCSS Spacing Plugin
 
-This can be useful when you want to spread items in the container with a set interval but don't want to add margins to every child manually and remove it from last child to make separation look proper.
+This plugin generates a set of css classes for creating a predictable and harmonious spacing.
+
+* **Inset spacing**: For all user interface containers.
+* **Inset squish spacing**: Same as previous, but a squished inset reduces space top and bottom, for example by 50%. *Used for buttons, inputs, data table cells, list items, etc.*
+* **Stack spacing**: For all stacked content. *So for example panels, form fields and anything else that is stacked vertically.*
+* **Inline spacing**: Things that are displayed inline. *For pills, tags, breadcrumbs, side-by-side form fields etc. *
+
+> Read about Space in Design Systems for more details of the concept: https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
+
 
 ## Install
-yarn
+
+Using yarn
+
 ```bash
-yarn add tailwindcss-spacing
+yarn add @suburbicode/tailwindcss-spacing
 ```
-npm
+Or using npm
+
 ```bash
-npm i tailwindcss-spacing
+npm i @suburbicode/tailwindcss-spacing
 ```
-
-## API
-
-#### `spacedItems({ values, children = ['*']} = {})`
-
-- _`values`_: [optional] an object with values to generate classes, defaults to configs 'margin' object values. If config does not contain margin values you have to pass your own values for classes to be generated.
-- _`children`_: [optional] array of selectors of which child tags should be affected, defaults to `['*']`
 
 ## Usage
-In tailwind config
+
+In tailwind config include the plugin:
+
 ```javascript
-const spacedItems = require('tailwindcss-spaced-items')
+// tailwind.config.js
 module.exports = {
   plugins: [
-    spacedItems(),
+    require('tailwindcss-spaced-items')
   ],
 }
 ```
-This will produce css like this for each value in configs `margin` object:
+
+This will produce css like this for each value in configs [`spacing`](https://tailwindcss.com/docs/theme/#spacing) object:
+
 ```css
-.spaced-x-1 > * { margin-right: .25rem; }
-.spaced-x-1 > *:last-child { margin-right: 0; }
-.spaced-y-1 > * { margin-bottom: .25rem; }
-.spaced-y-1 > *:last-child { margin-bottom: 0; }
-.spaced-xy-1 > * { margin-bottom: .25rem;
-                   margin-right: .25rem; }
-.spaced-xy-1 > *:last-child { margin-bottom: 0;
-                              margin-right: 0; }
+.inset-space-1 { padding: 0.25rem; }
+.inset-squish-space-1 { padding: calc(0.25rem / 1.7 - 1px) 0.25rem calc(0.25rem / 1.7); }
+.stack-space-1 { margin-bottom: 0.25rem; }
+.stack-space-1:last-child { margin-bottom: 0; }
+.inline-space-1 { margin-right: 0.25rem; }
+.inline-space-1:last-child { margin-right: 0; }
 
 /* ... */
-
 ```
-To override values:
+
+[To override values](https://tailwindcss.com/docs/customizing-spacing/):
+
 ```javascript
-const spacedItems = require('tailwindcss-spaced-items')
+// tailwind.config.js
 module.exports = {
+  theme: {
+    spacing: {
+      sm: '8px',
+      md: '12px',
+      lg: '16px',
+      xl: '24px',
+    }
+  },
   plugins: [
-    spacedItems({
-      values: {
-        '1': '1px',
-        '5': '5px',
-        '10': '10px',
-        '20': '20px',
-      },
-    }),
+    require('tailwindcss-spaced-items')
   ],
 }
 ```
+
 This will produce:
+
 ```css
-.spaced-x-1 > * { margin-right: 1px; }
-.spaced-x-1 > *:last-child { margin-right: 0; }
+.inset-space-sm { padding: 8px; }
+.inset-squish-space-sm { padding: calc(8px / 1.7 - 1px) 8px calc(8px / 1.7); }
 
 /* ... */
-
 ```
-To define a child tag:
+
+### Variants
+
+By default [`responsive`](https://tailwindcss.com/docs/responsive-design/) variant is enabled.
+
 ```javascript
-const spacedItems = require('tailwindcss-spaced-items')
+// tailwind.config.js
 module.exports = {
-  plugins: [
-    spacedItems({
-      children: ['div', 'p'],
-    }),
-  ],
+  variants: {
+    spacing: ['responsive'],
+  },
 }
 ```
-This will produce:
-```css
-.spaced-x-1 > div,
-.spaced-x-1 > p {
-  margin-right: .25rem;
-}
-.spaced-x-1 > div:last-child,
-.spaced-x-1 > p:last-child
-{
-  margin-right: 0;
-}
 
-/* ... */
-```
+# License
+
+Licensed under the [MIT license](https://github.com/suburbicode/tailwindcss-spacing/blob/master/LICENSE).

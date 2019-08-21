@@ -4,6 +4,8 @@ module.exports = ({ addUtilities, variants, theme }) => {
   const ratio = 1.7;
   let css = {};
 
+  delete spacing['0'];
+
   Object.keys(spacing).forEach(name => {
     let value = spacing[name];
 

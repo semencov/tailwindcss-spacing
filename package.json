@@ -1,5 +1,5 @@
 {
-  "name": "tailwindcss-spacing",
+  "name": "@suburbicode/tailwindcss-spacing",
   "version": "1.0.0",
   "description": "Tailwind plugin to generate classes for setting a predictable and harmonious spacing.",
   "main": "index.js",
