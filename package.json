@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-spacing-helpers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tailwind plugin to generate classes for setting a predictable and harmonious spacing.",
   "main": "index.js",
   "repository": {

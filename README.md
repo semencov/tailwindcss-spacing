@@ -31,7 +31,7 @@ In tailwind config include the plugin:
 // tailwind.config.js
 module.exports = {
   plugins: [
-    require('tailwindcss-spaced-items')
+    require('tailwindcss-spacing-helpers')
   ],
 }
 ```
@@ -63,7 +63,7 @@ module.exports = {
     }
   },
   plugins: [
-    require('tailwindcss-spaced-items')
+    require('tailwindcss-spacing-helpers')
   ],
 }
 ```
