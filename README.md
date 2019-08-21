@@ -15,12 +15,12 @@ This plugin generates a set of css classes for creating a predictable and harmon
 Using yarn
 
 ```bash
-yarn add @suburbicode/tailwindcss-spacing
+yarn add tailwindcss-spacing-helpers
 ```
 Or using npm
 
 ```bash
-npm i @suburbicode/tailwindcss-spacing
+npm i tailwindcss-spacing-helpers
 ```
 
 ## Usage
