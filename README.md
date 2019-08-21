@@ -3,9 +3,9 @@
 This plugin generates a set of css classes for creating a predictable and harmonious spacing.
 
 * **Inset spacing**: For all user interface containers.
-* **Inset squish spacing**: Same as previous, but a squished inset reduces space top and bottom, for example by 50%. *Used for buttons, inputs, data table cells, list items, etc.*
-* **Stack spacing**: For all stacked content. *So for example panels, form fields and anything else that is stacked vertically.*
-* **Inline spacing**: Things that are displayed inline. *For pills, tags, breadcrumbs, side-by-side form fields etc. *
+* **Inset squish spacing**: Same as previous, but a squished inset reduces space top and bottom, for example by 50%. _Used for buttons, inputs, data table cells, list items, etc._
+* **Stack spacing**: For all stacked content. _So for example panels, form fields and anything else that is stacked vertically._
+* **Inline spacing**: Things that are displayed inline. _For pills, tags, breadcrumbs, side-by-side form fields etc._
 
 > Read about Space in Design Systems for more details of the concept: https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
 
