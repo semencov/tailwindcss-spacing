@@ -1,7 +1,6 @@
-
 module.exports = ({ addUtilities, variants, theme }) => {
-  const spacing = theme('spacing', {});
-  const ratio = 1.7;
+  let spacing = theme('spacing', {});
+  let ratio = 1.7;
   let css = {};
 
   delete spacing['0'];

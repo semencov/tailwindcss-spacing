@@ -1,6 +1,6 @@
 # TailwindCSS Spacing Plugin
 
-This plugin generates a set of css classes for creating a predictable and harmonious spacing.
+This plugin generates a simple set of css classes for creating a predictable and harmonious spacing.
 
 * **Inset spacing**: For all user interface containers.
 * **Inset squish spacing**: Same as previous, but a squished inset reduces space top and bottom, for example by 50%. _Used for buttons, inputs, data table cells, list items, etc._
@@ -92,4 +92,4 @@ module.exports = {
 
 # License
 
-Licensed under the [MIT license](https://github.com/suburbicode/tailwindcss-spacing/blob/master/LICENSE).
+Licensed under the [MIT license](LICENSE).

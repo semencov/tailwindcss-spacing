@@ -1,16 +1,22 @@
 {
   "name": "tailwindcss-spacing-helpers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tailwind plugin to generate classes for setting a predictable and harmonious spacing.",
+  "keywords": ["tailwindcss", "tailwind", "plugin", "spacing", "spaced items", "child margin"],
+  "license": "MIT",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:suburbicode/tailwindcss-spacing.git"
-  },
+  "author": "Yuri Sementsov <hello@smcv.dev>",
   "scripts": {
     "release": "git commit --allow-empty -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
-  "author": "Suburbicode <suburbicode@pm.me>",
-  "keywords": ["tailwindcss", "tailwind", "plugin", "spacing", "spaced items", "child margin"],
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semencov/tailwindcss-spacing.git"
+  },
+  "bugs": {
+    "email": "hello@smcv.dev",
+    "url": "https://github.com/semencov/tailwindcss-spacing/issues"
+  },
+  "homepage": "https://github.com/semencov/tailwindcss-spacing",
+  "dependencies": {}
 }
